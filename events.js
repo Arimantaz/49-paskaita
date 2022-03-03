@@ -1,10 +1,10 @@
-const text = document.querySelector('textarea');
+const textAreaElement = document.querySelector('textarea');
 const button = document.querySelector('button');
-
-button.addEventListener('click', selfMessage);
+button.addEventListener('click', createSelfMessage);
 
 function getMessege() {
-    const result = text.value;
+    const result = textAreaElement.value;
+    textAreaElement.value = "";
     return result;
 }
 
@@ -14,7 +14,7 @@ function createParagraph() {
     return element;
 }
 
-function selfMessage() {
+function createSelfMessage() {
     const main = document.querySelector('.chat-container');
     const art = document.createElement('article');
     const sectionImage = document.createElement('section');
@@ -27,7 +27,6 @@ function selfMessage() {
     main.appendChild(art);
     const paragraph = createParagraph();
     sectionBubble.appendChild(paragraph);
-    paragraph = '';
 }
 
 
