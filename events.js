@@ -1,17 +1,17 @@
 const text = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-button.addEventListener('click', createEl);
+button.addEventListener('click', selfMessage);
 
-function pokalbis() {
+function getMessege() {
     const result = text.value;
     return result;
 }
 
-function createEl() {
+function createParagraph() {
     const element = document.createElement('p');
-    element.innerText = pokalbis();
-    console.log(element);  
+    element.innerText = getMessege();
+    return element; 
 }
 
 function selfMessage(){
@@ -25,7 +25,7 @@ function selfMessage(){
     sectionBubble.classList.add('chat-bubble');
     art.appendChild(sectionImage);
     art.appendChild(sectionBubble);
-
+    createParagraph
 }
 
 selfMessage()
