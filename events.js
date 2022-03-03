@@ -16,4 +16,12 @@ function createEl() {
 
 function selfMessage(){
     const art = document.createElement('article');
+    const sectionImage = document.createElement('section');
+    const sectionBuble = document.createElement('section');
+    art.classList.add('message', 'self');
+    sectionImage.classList.add('image');
+
 }
+
+
+// lintjs
