@@ -4,5 +4,6 @@ const button = document.querySelector('button');
 button.addEventListener('click', pokalbis);
 
 function pokalbis() {
-    console.log('test');
+    const result = text.value;
+    console.log(result);
 }
