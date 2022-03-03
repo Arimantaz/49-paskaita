@@ -11,24 +11,26 @@ function getMessege() {
 function createParagraph() {
     const element = document.createElement('p');
     element.innerText = getMessege();
-    return element; 
+    return element;
 }
 
-function selfMessage(){
+function selfMessage() {
     const main = document.querySelector('.chat-container');
     const art = document.createElement('article');
     const sectionImage = document.createElement('section');
     const sectionBubble = document.createElement('section');
-    main.appendChild(art);
     art.classList.add('message', 'self');
     sectionImage.classList.add('image');
     sectionBubble.classList.add('chat-bubble');
     art.appendChild(sectionImage);
     art.appendChild(sectionBubble);
-    createParagraph
+    main.appendChild(art);
+    const paragraph = createParagraph();
+    sectionBubble.appendChild(paragraph);
+    paragraph = '';
 }
 
-selfMessage()
+
 
 
 
