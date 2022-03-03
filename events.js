@@ -1,9 +1,15 @@
 const text = document.querySelector('textarea');
 const button = document.querySelector('button');
 
-button.addEventListener('click', pokalbis);
+button.addEventListener('click', createEl);
 
 function pokalbis() {
     const result = text.value;
-    console.log(result);
+    return result;
+}
+
+function createEl() {
+    const element = document.createElement('p');
+    element.innerText = pokalbis();
+    console.log(element);  
 }
