@@ -13,3 +13,7 @@ function createEl() {
     element.innerText = pokalbis();
     console.log(element);  
 }
+
+function selfMessage(){
+    const art = document.createElement('article');
+}
