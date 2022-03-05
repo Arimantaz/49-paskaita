@@ -7,9 +7,13 @@ const allMessage = [
     'Labas, kaip sekas',
     'Viskas OK'
 ]
-allMessage.forEach {
 
-};
+allMessage.forEach (zinute)
+function zinute (value) {
+console.log (value);
+}
+
+
 
 function getMessage() {
     textAreaElement.value = allMessage[0];
