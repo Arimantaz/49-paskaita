@@ -7,11 +7,14 @@ const allMessage = [
     'Labas, kaip sekas',
     'Viskas OK'
 ]
+allMessage.forEach {
+
+};
 
 function getMessage() {
     textAreaElement.value = allMessage[0];
     const result = textAreaElement.value;
-    // textAreaElement.value = "";
+    textAreaElement.value = "";
     return result;
 }
 
@@ -37,7 +40,7 @@ function createMessage(user) {
 
 }
 
-
+createMessage('self');
 
 
 // lintjs
