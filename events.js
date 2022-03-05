@@ -1,6 +1,10 @@
 const textAreaElement = document.querySelector('textarea');
 const button = document.querySelector('button');
-button.addEventListener('click', createSelfMessage);
+button.addEventListener('click', createMessage);
+
+const allMessage = {
+    
+}
 
 function getMessege() {
     const result = textAreaElement.value;
@@ -14,12 +18,12 @@ function createParagraph() {
     return element;
 }
 
-function createSelfMessage() {
+function createMessage(user) {
     const main = document.querySelector('.chat-container');
     const art = document.createElement('article');
     const sectionImage = document.createElement('section');
     const sectionBubble = document.createElement('section');
-    art.classList.add('message', 'self');
+    art.classList.add('message', user);
     sectionImage.classList.add('image');
     sectionBubble.classList.add('chat-bubble');
     art.appendChild(sectionImage);
@@ -27,8 +31,8 @@ function createSelfMessage() {
     main.appendChild(art);
     const paragraph = createParagraph();
     sectionBubble.appendChild(paragraph);
-}
 
+}
 
 
 
