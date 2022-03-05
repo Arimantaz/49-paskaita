@@ -2,6 +2,16 @@ const textAreaElement = document.querySelector('textarea');
 const button = document.querySelector('button');
 button.addEventListener('click', createMessage);
 
+const self = {
+    name: 'self',
+    message: 'Labas',
+}
+
+const contact = {
+    name: 'contact',
+    message:  'Labas, kaip sekas',
+}
+
 const allMessage = [
     'Labas',
     'Labas, kaip sekas',
