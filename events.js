@@ -1,6 +1,6 @@
 const textAreaElement = document.querySelector('textarea');
 const button = document.querySelector('button');
-button.addEventListener('click', createMessage);
+button.addEventListener('click', getMessage);
 
 const allMessage = [{
         class: 'self',
@@ -25,15 +25,12 @@ function zinute(messageData) {
 
 function getMessage() {
     const result = textAreaElement.value;
+    createMessage('self', result)
+    //createMessage('contact', 'Sveikas as dabar isvykes')
     textAreaElement.value = "";
     return result;
 }
 
-// function createParagraph() {
-//     const element = document.createElement('p');
-//     element.innerText = getMessage();
-//     return element;
-// }
 
 function createMessage(className, messageText) {
     const main = document.querySelector('.chat-container');
