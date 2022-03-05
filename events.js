@@ -8,15 +8,17 @@ const allMessage = [
     'Viskas OK'
 ]
 
-allMessage.forEach (zinute)
-function zinute (value) {
-console.log (value);
+allMessage.forEach(zinute);
+function zinute(value) {
+    console.log(value);
+    textAreaElement.value = value;
+    createMessage('self')
+
 }
 
 
 
 function getMessage() {
-    textAreaElement.value = allMessage[0];
     const result = textAreaElement.value;
     textAreaElement.value = "";
     return result;
@@ -44,7 +46,7 @@ function createMessage(user) {
 
 }
 
-createMessage('self');
+
 
 
 // lintjs
