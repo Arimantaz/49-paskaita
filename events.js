@@ -9,14 +9,11 @@ const allMessage = [
 ]
 
 allMessage.forEach(zinute);
+
 function zinute(value) {
     console.log(value);
-    textAreaElement.value = value;
-    createMessage('self')
-
+    createMessage('self', value);
 }
-
-
 
 function getMessage() {
     const result = textAreaElement.value;
@@ -30,7 +27,7 @@ function createParagraph() {
     return element;
 }
 
-function createMessage(user) {
+function createMessage(user, value) {
     const main = document.querySelector('.chat-container');
     const art = document.createElement('article');
     const sectionImage = document.createElement('section');
@@ -41,7 +38,10 @@ function createMessage(user) {
     art.appendChild(sectionImage);
     art.appendChild(sectionBubble);
     main.appendChild(art);
-    const paragraph = createParagraph();
+
+    const paragraph = document.createElement('p');
+    paragraph.innerText = value;
+
     sectionBubble.appendChild(paragraph);
 
 }
