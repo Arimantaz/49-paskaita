@@ -2,19 +2,22 @@ const textAreaElement = document.querySelector('textarea');
 const button = document.querySelector('button');
 button.addEventListener('click', createMessage);
 
-const allMessage = {
-    
-}
+const allMessage = [
+    'Labas',
+    'Labas, kaip sekas',
+    'Viskas OK'
+]
 
-function getMessege() {
+function getMessage() {
+    textAreaElement.value = allMessage[0];
     const result = textAreaElement.value;
-    textAreaElement.value = "";
+    // textAreaElement.value = "";
     return result;
 }
 
 function createParagraph() {
     const element = document.createElement('p');
-    element.innerText = getMessege();
+    element.innerText = getMessage();
     return element;
 }
 
